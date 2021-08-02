@@ -1,5 +1,10 @@
 # hello-world
 
+
+## Result:
+
+![](./src/assets/ex1.jpg)
+
 ## Project setup
 ```
 npm install
