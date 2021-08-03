@@ -3,7 +3,7 @@
 
 ## Result:
 
-![](./src/assets/ex1.jpg)
+![](./src/assets/ex2.jpg)
 
 ## Project setup
 ```
