@@ -25,7 +25,7 @@
       </div>
       <!-- Home Image -->
       <div class="home-img">
-        <img src="@/assets/profile.jpeg" alt="" />
+        <img src="@/assets/pho.png" alt="Luu Dang Pho Photo" />
       </div>
 
       <!-- Social -->
@@ -51,18 +51,18 @@
       <div class="about-content">
         <!-- About Image -->
         <div class="about-img">
-          <img src="@/assets/about.jpg" alt="" />
+          <img src="@/assets/pho1.png" alt="Luu Dang Pho Photo" />
         </div>
         <!-- About Text -->
         <div class="about-text">
           <h1>I'm {{ name }}</h1>
           <p>
-            My name is {{ fullname }}. I’m 22 years old and I’m single. I live
-            in Hanoi and i'll graduating from Hanoi University of Business and
-            Technology (HUBT) 3 month later with the major in Software Engineer.
-            I like reading books and playgame. I’m a careful and hard-working
-            person. I’m eager to learn new things and willing to work in team. I
-            easily adapt to new working environment and take initiative in work.
+            My name is {{ fullname }}. I’m 22 years old. I live in Hanoi and
+            i'll graduating from Hanoi University of Business and Technology
+            (HUBT) 3 month later with the major in Software Engineer. I like
+            reading books and playgame. I’m a careful and hard-working person.
+            I’m eager to learn new things and willing to work in team. I easily
+            adapt to new working environment and take initiative in work.
           </p>
           <a href="#">Download CV</a>
         </div>
