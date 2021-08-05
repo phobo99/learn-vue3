@@ -15,8 +15,8 @@
       </ul>
     </nav>
     <!-- Main Home Text And Image -->
-    <section id="home">
-      <div class="home-text">
+    <section id="home" v-scroll-reveal.reset>
+      <div class="home-text" v-scroll-reveal.reset="{ delay: 250 }">
         <h1>
           Hi, I'm <br />Luu <span>{{ name }}</span> <br />Web Developer
         </h1>
@@ -24,12 +24,12 @@
         <a href="#contact">Hire Me</a>
       </div>
       <!-- Home Image -->
-      <div class="home-img">
+      <div class="home-img" v-scroll-reveal.reset="{ delay: 450 }">
         <img src="@/assets/pho.png" alt="Luu Dang Pho Photo" />
       </div>
 
       <!-- Social -->
-      <div class="social">
+      <div class="social" v-scroll-reveal.reset="{ delay: 850 }">
         <a href="https://www.facebook.com/phobotkcb/" target="_blank"
           ><i class="bx bxl-facebook"></i
         ></a>
@@ -43,18 +43,31 @@
     </section>
 
     <!-- About -->
-    <section id="about">
-      <div class="heading">
+    <section id="about" v-scroll-reveal.reset>
+      <div
+        class="heading"
+        v-scroll-reveal.reset="{
+          delay: 250,
+          scale: 4,
+          rotate: {
+            x: 120,
+            z: 20,
+          },
+        }"
+      >
         <h2>About</h2>
         <p>My Introduction</p>
       </div>
       <div class="about-content">
         <!-- About Image -->
-        <div class="about-img">
+        <div class="about-img" v-scroll-reveal.reset="{ delay: 250, scale: 2 }">
           <img src="@/assets/pho1.png" alt="Luu Dang Pho Photo" />
         </div>
         <!-- About Text -->
-        <div class="about-text">
+        <div
+          class="about-text"
+          v-scroll-reveal.reset="{ delay: 450, scale: 2 }"
+        >
           <h1>I'm {{ name }}</h1>
           <p>
             My name is {{ fullname }}. I’m 22 years old. I live in Hanoi and
@@ -70,15 +83,38 @@
     </section>
 
     <!-- Services -->
-    <section id="services">
-      <div class="heading">
+    <section id="services" v-scroll-reveal.reset>
+      <div class="heading" v-scroll-reveal.reset="{ delay: 450, scale: 2 }">
         <h2>Services</h2>
         <p>My Services Offer</p>
       </div>
 
-      <div class="services-content">
+      <div
+        class="services-content"
+        v-scroll-reveal.reset="{
+          delay: 250,
+          scale: 4,
+          rotate: {
+            x: 120,
+            z: 20,
+          },
+        }"
+      >
         <!-- Boxes -->
-        <div class="box" v-for="project in projects" :key="project.id">
+        <div
+          class="box"
+          v-scroll-reveal.reset="{
+            delay: 450,
+            scale: 2,
+            rotate: {
+              x: 120,
+              y: 40,
+              z: 120,
+            },
+          }"
+          v-for="project in projects"
+          :key="project.id"
+        >
           <img :src="project.image" alt="" />
           <h1>{{ project.name }}</h1>
           <p>
@@ -89,13 +125,13 @@
     </section>
 
     <!-- Work -->
-    <section id="work">
-      <div class="heading work-heading">
+    <section id="work" v-scroll-reveal.reset>
+      <div class="heading work-heading" v-scroll-reveal.reset="{ delay: 250 }">
         <h2>Work</h2>
         <p>Work With Me</p>
       </div>
       <div class="work-content">
-        <div class="work-text">
+        <div class="work-text" v-scroll-reveal.reset="{ delay: 450, scale: 3}">
           <h1>
             We Belive To Deliver Best <br />
             Quality Work
@@ -113,14 +149,21 @@
           <a href="#contact">Contact</a>
         </div>
 
-        <div class="work-img">
+        <div
+          class="work-img"
+          v-scroll-reveal.reset="{
+            delay: 450,
+            scale: 3,
+            easing: (0.5, 0, 0, 1)
+          }"
+        >
           <img src="@/assets/work.jpg" alt="" />
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" v-scroll-reveal.reset="{ delay: 250, duration: 600 }">
       <div class="heading color">
         <h2>Contact</h2>
         <p>Leave a message we will try to reply in 24 hours.</p>
@@ -152,11 +195,10 @@
     </section>
 
     <div class="copyright">
-      <p>&#169; 2021 Luu Dang Pho All Right Reserves</p>
+      <p>&#169; 2021 Luu Dang Pho All Right Reserves </p>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: "App",
@@ -212,7 +254,6 @@ export default {
   },
 };
 </script>
-
 <style>
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
